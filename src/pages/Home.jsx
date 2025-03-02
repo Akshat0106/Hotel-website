@@ -1,4 +1,4 @@
-import img1 from '../assets/img-1.jpg'; 
+import img1 from '../assets/img-3.jpg'; 
 export function Home(){
     return (
       <div>
