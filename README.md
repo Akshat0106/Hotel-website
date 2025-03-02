@@ -1,3 +1,3 @@
 # Hotel Website
 
-[hotel website](https://hotel-website-blush.vercel.app/).
+[hotel website](https://hotel-website-gilt.vercel.app/).
