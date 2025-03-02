@@ -16,7 +16,7 @@ function Header(){
           
           <h1 className='text-2xl font-bold text-black'>Logo</h1>
           
-          <a href='#' className='px-4 py-2 bg-black text-white rounded-md hover:opacity-80 transition'>Github-Link</a>
+          <a href='https://github.com/Akshat0106/Hotel-website/blob/main/README.md' className='px-4 py-2 bg-black text-white rounded-md hover:opacity-80 transition'>Github-Link</a>
           
           <nav className='flex space-x-6'>
           <Link to='/' className='text-black hover:underline'>Home</Link>
