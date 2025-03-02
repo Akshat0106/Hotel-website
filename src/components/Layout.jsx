@@ -5,14 +5,12 @@ import Footer from "./Footer";
 function Layout(){
     return (
       <>
-      <div className='w-screen h-screen'>
+      <div className='w-screen h-screen flex flex-col'>
         <Header/>
-        <div className='min-h-[60vh]'>
+        <main className='flex-grow min-h-[60vh] p-4'>
           <Outlet/>
-        </div>
-        <div className='min-h-[20vh]'>
+        </main>
           <Footer/>
-        </div>
       </div>
       </>
     )
