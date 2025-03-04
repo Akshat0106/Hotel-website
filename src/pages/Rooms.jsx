@@ -4,7 +4,7 @@ import img2 from '../assets/img-2.jpg';
 export function Rooms(){
     return (
       <>
-      <div className="bg-gray-100 mt-4">
+      <div className="bg-gray-100">
         <div className="p-40">
           <div>
             <h1>Luxury & Comfortable Rooms</h1>
