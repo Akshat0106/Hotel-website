@@ -76,10 +76,10 @@
 import img2 from "../assets/img-2.jpg";
 
 export function AboutUs() {
-  return (
-    <div className="max-w-7xl mx-auto px-6 py-12 space-y-16">
+  return ( 
+    <div className="w-full mx-auto">
       {/* About Us Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 p-[80px]">
         {/* Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold mb-4">About Us</h2>
@@ -95,7 +95,7 @@ export function AboutUs() {
         </div>
 
         {/* Image Section */}
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 ">
           <img
             src={img2}
             alt="About Us"
