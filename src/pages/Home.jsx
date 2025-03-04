@@ -1,19 +1,14 @@
 import img1 from "../assets/img-3.jpg";
 import img2 from "../assets/img-1.jpg";
+import  {HeroSection}  from "../components/homePageComponents/HeroSection";
 export function Home() {
   return (
     <div>
-      <div
-        className="w-full h-[90vh] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${img1})` }}
-      >
-        <div className="h-full flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-black bg-white p-7">
-            Welcome to our hotel
-          </h2>
-        </div>
-        <div></div>
-      </div>
+      {/* Hero Section */}
+
+      <div><HeroSection/></div>
+
+      {/* Hero Section Ends */}
 
       {/* Rooms section  */}
       <div className="bg-gray-100">
@@ -129,42 +124,36 @@ export function Home() {
       </div>
 
       {/* facilities section */}
-      <div className="flex flex-col items-center border-2 border-black h-96">
-        <div className="p-12 border-2 border-black">
-          <div className="text-4xl font-bold">Facilities</div>
-
-          {/* facility cards */}
-          <div className="flex justify-center gap-4">
-            <div>
-              <i class="fa-solid fa-wifi"></i>
-              <h1>Secure Wifi</h1>
+      <div className="relative h-96 flex flex-col items-center justify-center bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${img1})` }}>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+        
+          {/* Content */}
+      <div className="relative z-10 text-white text-center">
+        <h2 className="text-white text-4xl font-bold mb-11">Facilities</h2>
+        <div className="flex justify-center gap-6">
+          {/* Facility Card */}
+          {[
+            { icon: "fa-wifi", text: "SECURE WI-FI" },
+            { icon: "fa-kitchen-set", text: "ROOM SERVICE" },
+            { icon: "fa-bell-concierge", text: "24x7 RECEPTION" },
+            { icon: "fa-utensils", text: "RESTAURANT" },
+            { icon: "fa-dumbbell", text: "GYM" },
+            { icon: "fa-person-swimming", text: "SWIMMING POOL" },
+          ].map((facility, index) => (
+            <div
+              key={index}
+              className="bg-white flex flex-col items-center justify-center w-32 h-32 rounded-xl shadow-lg border-4 border-gray-500"
+            >
+              <i
+                className={`fa-solid ${facility.icon} text-4xl text-black`}
+              ></i>
+              <h1 className="text-sm font-semibold text-black mt-2">
+                {facility.text}
+              </h1>
             </div>
-
-            <div>
-              <i class="fa-solid fa-kitchen-set"></i>
-              <h1>Room Service</h1>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-bell-concierge"></i>
-              <h1>24x7 Reception</h1>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-utensils"></i>
-              <h1>Restaurant</h1>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-dumbbell"></i>
-              <h1>Gym</h1>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-person-swimming"></i>
-              <h1>Swimming Pool</h1>
-            </div>
-          </div>
+          ))}
+        </div>
         </div>
       </div>
 
@@ -188,9 +177,11 @@ export function Home() {
       {/* Dining */}
       <div>
         <div className="p-12 border-2 border-black">
-          <div className="text-4xl font-bold border-2 border-black">Dining</div>
+          <div className="text-center text-4xl font-bold border-2 border-black">
+            Dining
+          </div>
 
-          <div className="flex flex-row items-center border-2 border-black h-96 gap-4">
+          <div className="flex flex-row items-center justify-center border-2 border-black h-96 gap-4">
             <div className="relative w-40 h-40">
               <img
                 src={img1}
@@ -301,7 +292,7 @@ export function Home() {
           What People Say About Us
         </div>
 
-          {/* Testimonial Card */}
+        {/* Testimonial Card */}
         <div className="flex flex-row items-center justify-center gap-6">
           <div className="max-w-2xl mx-auto flex items-center border-2 border-black p-6 rounded-lg shadow-lg ">
             {/* Image on Left */}
