@@ -12,4 +12,8 @@
       0% 25%
     );
   }
+
+  .clip-design {
+    clip-path: xywh(0 5px 100% 75% round 15% 0);
+  }
 }

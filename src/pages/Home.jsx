@@ -4,6 +4,8 @@ import { HeroSection } from "../components/homePageComponents/HeroSection";
 import { RoomSection } from "../components/homePageComponents/RoomSection";
 import { ParallaxEffect } from "../components/homePageComponents/ParallaxEffect";
 import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSection";
+import { Dining } from "../components/homePageComponents/Dining"; 
+import { Testimonial } from "../components/homePageComponents/testimonial";
 export function Home() {
   return (
     <div>
@@ -26,60 +28,40 @@ export function Home() {
 
       {/* facilities section */}
       <div>
-        <ParallaxEffect img1={img1} />
+        <ParallaxEffect img1={img1} >
+          <FacilitiesSection />
+        </ParallaxEffect>
       </div>
 
 
       {/* About-us area*/}
       <div>
-        <div className="flex flex-row items-center border-2 border-black h-96">
-          <div className="p-4 border-2 border-black w-1/2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-            omnis voluptates adipisci fuga rem in, unde facilis itaque officia
-            maiores quasi necessitatibus ex ratione, laboriosam a vero
-            recusandae maxime similique? Sint delectus officia, quos rerum
-            possimus illo maxime, sequi animi quibusdam ducimus doloremque at
-            voluptates totam architecto omnis dignissimos molestias.
+        <div className="grid grid-cols-4 h-full bg-gray-200 py-24 px-56 gap-20">
+          <div className="p-4 col-span-2">
+            <div className="flex flex-col items-start h-full">
+            <h1 className="font-semibold text-3xl">A Perfect Place to Remember</h1>
+            <p className="mt-7"><b>RATEbot Ai…</b> has been into the hospitality and service industry for the past 5 years</p>
+            <div className="mt-6 text-center">
+          <a
+            href="#"
+            className="inline-block px-6 py-3 text-lg font-semibold bg-black text-white rounded-lg hover:opacity-80 transition"
+          >
+            View More
+          </a>
+        </div>
+            </div>
           </div>
-          <div className="h-full w-1/2">
-            <img src={img2} alt="" className="h-full w-full object-cover" />
+          <div className="h-96 col-span-2 ">
+            <img src={img2} alt="" className="h-full w-full object-cover clip-design"/>
           </div>
         </div>
       </div>
 
       {/* Dining */}
       <div>
-        <div className="p-12 border-2 border-black">
-          <div className="text-center text-4xl font-bold border-2 border-black">
-            Dining
-          </div>
-
-          <div className="flex flex-row items-center justify-center border-2 border-black h-96 gap-4">
-            <div className="relative w-40 h-40">
-              <img
-                src={img1}
-                alt="Hexagon Image"
-                className="w-full h-full object-cover clip-hexagon"
-              />
-            </div>
-
-            <div className="relative w-40 h-40">
-              <img
-                src={img1}
-                alt="Hexagon Image"
-                className="w-full h-full object-cover clip-hexagon"
-              />
-            </div>
-
-            <div className="relative w-40 h-40">
-              <img
-                src={img1}
-                alt="Hexagon Image"
-                className="w-full h-full object-cover clip-hexagon"
-              />
-            </div>
-          </div>
-        </div>
+        <ParallaxEffect img1={img1}>
+          <Dining img1={img2} />
+        </ParallaxEffect>
       </div>
 
       {/* Room Gallery */}
@@ -166,44 +148,49 @@ export function Home() {
         </div>
 
         {/* Testimonial Card */}
-        <div className="flex flex-row items-center justify-center gap-6">
-          <div className="max-w-2xl mx-auto flex items-center border-2 border-black p-6 rounded-lg shadow-lg ">
+        {/* <div className="flex flex-row items-center justify-center gap-6">
+          <div className="max-w-2xl mx-auto flex items-center border-2 border-black p-6 rounded-lg shadow-lg "> */}
             {/* Image on Left */}
-            <div className="w-20 h-20 flex-shrink-0">
+            {/* <div className="w-20 h-20 flex-shrink-0">
               <img
                 src={img1}
                 alt="User Image"
                 className="w-full h-full rounded-full object-cover border border-gray-300"
               />
-            </div>
+            </div> */}
 
             {/* Text Content on Right */}
-            <div className="ml-6">
+            {/* <div className="ml-6">
+              <p className="text-gray-700 text-lg">
+                "The theme is beautiful and easy to customize. Also, technical
+                support is always ready to assist and quick to reply."
+              </p>
+            </div>
+          </div> */}
+
+          {/* <div className="max-w-2xl mx-auto flex items-center border-2 border-black p-6 rounded-lg shadow-lg"> */}
+            {/* Image on Left */}
+            {/* <div className="w-20 h-20 flex-shrink-0"> */}
+              {/* <img
+                src={img1}
+                alt="User Image"
+                className="w-full h-full rounded-full object-cover border border-gray-300"
+              />
+            </div> */}
+
+            {/* Text Content on Right */}
+            {/* <div className="ml-6">
               <p className="text-gray-700 text-lg">
                 "The theme is beautiful and easy to customize. Also, technical
                 support is always ready to assist and quick to reply."
               </p>
             </div>
           </div>
-
-          <div className="max-w-2xl mx-auto flex items-center border-2 border-black p-6 rounded-lg shadow-lg">
-            {/* Image on Left */}
-            <div className="w-20 h-20 flex-shrink-0">
-              <img
-                src={img1}
-                alt="User Image"
-                className="w-full h-full rounded-full object-cover border border-gray-300"
-              />
-            </div>
-
-            {/* Text Content on Right */}
-            <div className="ml-6">
-              <p className="text-gray-700 text-lg">
-                "The theme is beautiful and easy to customize. Also, technical
-                support is always ready to assist and quick to reply."
-              </p>
-            </div>
-          </div>
+        </div> */}
+        <div>
+        <ParallaxEffect img1={img1}>
+          <Testimonial/>
+        </ParallaxEffect>
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
-import { FacilitiesSection } from "./FacilitiesSection";
-
-export function ParallaxEffect({ img1 }) {
+export function ParallaxEffect({ img1,children}) {
 
   return (
     <div className="relative h-96 flex flex-col items-center justify-center bg-cover bg-center bg-fixed">
@@ -13,7 +11,7 @@ export function ParallaxEffect({ img1 }) {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
-      <FacilitiesSection />
+      {children}
       </div>
     </div>
   );

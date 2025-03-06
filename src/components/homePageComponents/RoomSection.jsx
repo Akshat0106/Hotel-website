@@ -29,7 +29,7 @@ export function RoomSection() {
       : roomsData.filter((room) => room.category === selectedCategory);
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-6 py-12 text-center">
+      <div className="max-w-7xl mx-auto px-6 py-12 text-center bg-green-300">
         {/* Category Buttons */}
         <div className="flex justify-center gap-4 mb-8">
           {["All", "Deluxe", "Suite"].map((category) => (
@@ -48,7 +48,7 @@ export function RoomSection() {
         </div>
 
         {/* Rooms Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           {filteredRooms.map((room) => (
             <div key={room.id} className="bg-white shadow-lg rounded-lg p-4">
               <img
