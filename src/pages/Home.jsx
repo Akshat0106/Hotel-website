@@ -204,7 +204,7 @@ import { RoomSection } from "../components/homePageComponents/RoomSection";
 import { ParallaxEffect } from "../components/homePageComponents/ParallaxEffect";
 import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSection";
 import { Dining } from "../components/homePageComponents/Dining"; 
-import { Testimonial } from "../components/homePageComponents/testimonial";
+import { Testimonial } from "../components/homePageComponents/Testimonial";
 
 export function Home() {
   return (
