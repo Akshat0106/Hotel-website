@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
-@layer utilities {
+/* @layer utilities {
   .clip-hexagon {
     clip-path: polygon(
       50% 0%,
@@ -11,9 +11,94 @@
       0% 75%,
       0% 25%
     );
+    outline: 4px solid #6C6;
+    outline-offset: -4px;
   }
 
   .clip-design {
     clip-path: xywh(0 5px 100% 75% round 15% 0);
   }
+} */
+
+/* Add these styles to your CSS file */
+/* .hexagon-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hexagon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  box-shadow: inset 0 0 0 4px #6C6; /* Color and width of the border */
+  /* z-index: 2;
+  pointer-events: none;
+}
+
+.hexagon-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  z-index: 1;
+} */ 
+
+.hex-wrapper {
+  position: relative;
+}
+
+.hex-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6C6; /* Border color */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  z-index: 1;
+}
+
+.hex-content {
+  position: absolute;
+  top: 4px; /* Border thickness */
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  overflow: hidden;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  z-index: 2;
 }
