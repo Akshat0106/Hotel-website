@@ -4,7 +4,7 @@
 // import { RoomSection } from "../components/homePageComponents/RoomSection";
 // import { ParallaxEffect } from "../components/homePageComponents/ParallaxEffect";
 // import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSection";
-// import { Dining } from "../components/homePageComponents/Dining"; 
+// import { Dining } from "../components/homePageComponents/Dining";
 // import { Testimonial } from "../components/homePageComponents/testimonial";
 // export function Home() {
 //   return (
@@ -14,7 +14,7 @@
 //       <div><HeroSection/></div>
 
 //       {/* Hero Section Ends */}
-      
+
 //     {/* ------------------------------------- */}
 
 //       {/* Rooms section  */}
@@ -25,14 +25,12 @@
 
 //     {/* ------------------------------------- */}
 
-
 //       {/* facilities section */}
 //       <div>
 //         <ParallaxEffect img1={img1} >
 //           <FacilitiesSection />
 //         </ParallaxEffect>
 //       </div>
-
 
 //       {/* About-us area*/}
 //       <div>
@@ -203,8 +201,9 @@ import { HeroSection } from "../components/homePageComponents/HeroSection";
 import { RoomSection } from "../components/homePageComponents/RoomSection";
 import { ParallaxEffect } from "../components/homePageComponents/ParallaxEffect";
 import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSection";
-import { Dining } from "../components/homePageComponents/Dining"; 
+import { Dining } from "../components/homePageComponents/Dining";
 import { Testimonial } from "../components/homePageComponents/Testimonial";
+import { Navigate } from "react-router";
 
 export function Home() {
   return (
@@ -223,9 +222,12 @@ export function Home() {
       <div className="bg-gray-200 py-12 px-6 md:px-20 lg:px-56">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div className="p-4">
-            <h1 className="font-semibold text-2xl md:text-3xl">A Perfect Place to Remember</h1>
+            <h1 className="font-semibold text-2xl md:text-3xl">
+              A Perfect Place to Remember
+            </h1>
             <p className="mt-5 text-gray-700">
-              <b>RATEbot Ai…</b> has been into the hospitality and service industry for the past 5 years
+              <b>RATEbot Ai…</b> has been into the hospitality and service
+              industry for the past 5 years
             </p>
             <div className="mt-6">
               <a
@@ -237,16 +239,22 @@ export function Home() {
             </div>
           </div>
           <div className="h-64 md:h-96">
-            <img src={img2} alt="About Us" className="w-full h-full object-cover rounded-lg" />
+            <img
+              src={img2}
+              alt="About Us"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
+
       {/* Dining */}
       <ParallaxEffect img1={img1}>
         <Dining img1={img2} />
       </ParallaxEffect>
+
       {/* Rooms Gallery */}
-      <div className="p-6 md:p-12">
+      {/* <div className="p-6 md:p-12">
         <div className="text-3xl md:text-4xl font-bold text-center border-b-4 border-black pb-4">
           Rooms Gallery
         </div>
@@ -265,16 +273,50 @@ export function Home() {
             View More
           </a>
         </div>
+      </div> */}
+      <div className="p-6 md:p-12">
+        <div className="text-3xl md:text-4xl font-bold text-center border-b-4 border-black pb-4">
+          Rooms Gallery
+        </div>
+        <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
+          {[img1, img1, img1].map((image, index) => (
+            <div
+              key={index}
+              className="w-full md:w-64 h-80 rounded-lg shadow-lg overflow-hidden border border-gray-300 relative group cursor-pointer"
+              onClick={() => Navigate("/rooms")} // Assuming you're using react-router's useNavigate
+            >
+              <img
+                src={image}
+                alt="Room"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <span className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <a href="">View Details</a>
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 text-center">
+          <a
+            href="/rooms" // Update this with your actual rooms gallery route
+            className="inline-block px-6 py-3 text-lg font-semibold bg-black text-white rounded-lg hover:opacity-80 transition"
+          >
+            View More
+          </a>
+        </div>
       </div>
 
       {/* Testimonials */}
-        <div>
-      <ParallaxEffect img1={img1}>
-        <div className="p-52">
-        <Testimonial />
-        </div>
-      </ParallaxEffect>
-        </div>
+      <div>
+        <ParallaxEffect img1={img1}>
+          <div className="p-52">
+            <Testimonial />
+          </div>
+        </ParallaxEffect>
+      </div>
     </div>
   );
 }

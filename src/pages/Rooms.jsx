@@ -166,7 +166,8 @@ export function Rooms() {
       <h1 className="text-center text-4xl font-medium">Luxury Rooms</h1>
       <div className="max-w-7xl mx-auto px-6 py-12 text-center">
         {/* Category Buttons */}
-        <div className="flex justify-center gap-4 mb-6 h-12">
+        <div className="flex justify-center mb-6">
+        <div className="flex gap-4 h-12 overflow-x-auto whitespace-nowrap px-2 md:px-0">
           {["All", "Deluxe", "Suite","Executive","Presidential"].map((category) => (
             <button
               key={category}
@@ -180,6 +181,7 @@ export function Rooms() {
               {category}
             </button>
           ))}
+        </div>
         </div>
 
         {/* Rooms Grid */}
