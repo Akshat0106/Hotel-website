@@ -98,13 +98,13 @@ export function RoomGallery({ img1, img2 }) {
       <LightGallery
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        className="grid grid-cols-1 md:grid-cols-3"
       >
         <a href={img1} className="rounded-2xl overflow-hidden shadow-lg">
           <img
             alt="image1"
             src={img1}
-            className="w-full h-60 object-cover rounded-2xl hover:scale-105 transition-transform duration-200"
+            className="w-full h-60 object-cover rounded-2xl hover:scale-105 transition-transform duration-200 mb-4"
           />
         </a>
         <a href={img2} className="rounded-2xl overflow-hidden shadow-lg">

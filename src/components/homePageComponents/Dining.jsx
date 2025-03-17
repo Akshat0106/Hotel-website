@@ -121,15 +121,20 @@
 export function Dining({ img1 }) {
   return (
     <div className="p-4 mt-2">
+
       {/* Section Heading */}
-      <div className="text-center text-3xl md:text-4xl text-white font-bold">
-        Dining
+      <div className="mb-8">
+        <div className="text-center text-3xl md:text-4xl text-white font-bold mb-2">
+          Dining
+        </div>
+        <div className="text-center text-xl mb-6 text-white">★★★★★</div>
       </div>
+
 
       {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6 place-items-center">
         {/* First Hexagon */}
-        <div className="hex-wrapper w-48 h-48 md:w-60 md:h-60">
+        <div className="hex-wrapper w-60 h-60 md:w-70 md:h-80">
           <div className="hex-border"></div>
           <div className="hex-content">
             <img src={img1} alt="Hexagon Image" className="w-full h-full object-cover" />
@@ -137,7 +142,7 @@ export function Dining({ img1 }) {
         </div>
 
         {/* Second Hexagon */}
-        <div className="hex-wrapper w-48 h-48 md:w-60 md:h-60">
+        <div className="hex-wrapper w-60 h-60 md:w-70 md:h-80">
           <div className="hex-border"></div>
           <div className="hex-content">
             <img src={img1} alt="Hexagon Image" className="w-full h-full object-cover" />
@@ -145,7 +150,7 @@ export function Dining({ img1 }) {
         </div>
 
         {/* Third Hexagon */}
-        <div className="hex-wrapper w-48 h-48 md:w-60 md:h-60">
+        <div className="hex-wrapper w-60 h-60 md:w-70 md:h-80">
           <div className="hex-border"></div>
           <div className="hex-content">
             <img src={img1} alt="Hexagon Image" className="w-full h-full object-cover" />

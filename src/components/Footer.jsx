@@ -4,9 +4,9 @@ function Footer() {
       <div className='max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left justify-center'>
         <div className='flex flex-col items-center md:items-start'>
           <h3 className='text-lg font-semibold mb-4'>Office Contact</h3>
-          <p className='text-gray-400'>SOUTH-WING, Yadav Nagar, Chandivali, Andheri East, Mumbai, Maharashtra 400072</p>
+          <p className='text-gray-400'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p className='text-gray-400 mt-2'>+91 1111111111</p>
-          <p className='text-gray-400'>xyx@gmail/com</p>
+          <p className='text-gray-400'>abc@gmail/com</p>
         </div>
         <div className='flex flex-col items-center md:items-start'>
           <h3 className='text-lg font-semibold mb-4'>Useful Pages</h3>

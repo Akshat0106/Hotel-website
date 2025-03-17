@@ -102,7 +102,12 @@ export function Testimonial() {
 
   return (
     <div>
-      <section className="flex h-56 w-screen lg:w-full p-6 md:p-8 justify-center items-center bg-gray-800">
+      <div className="mb-6">
+      <h1 className="text-3xl font-bold mb-2 text-white md:text-4xl">What people say about us</h1>
+      <div className="text-center text-xl text-white">★★★★★</div>
+      </div>
+
+      <section className="flex h-56 w-screen lg:w-full p-6 md:p-8 justify-center items-center bg-gray-300">
         <div className="max-w-2xl w-full">
           {Testimonial_data.map(
             (item, index) =>

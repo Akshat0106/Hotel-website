@@ -1,7 +1,11 @@
 export function FacilitiesSection() {
     return (
       <div className="relative z-10 text-white text-center">
-        <h2 className="text-white text-4xl font-bold mb-11">Facilities</h2>
+        <div className="mb-11">
+        <h2 className="text-white text-4xl font-bold mb-2">Facilities</h2>
+        <div className="text-center text-xl mb-6 text-white">★★★★★</div>
+        </div>
+
         <div className="flex justify-center gap-6 flex-wrap"> {/* Ensure wrapping for smaller screens */}
           {/* Facility Cards */}
           {[

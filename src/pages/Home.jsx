@@ -215,12 +215,17 @@ export function Home() {
 
 
       {/* Rooms Section */}
-      <div className="bg-gray-200 pt-2 w-full overflow-x-hidden">
+      <div className="bg-gray-200 w-full overflow-x-hidden">
         <RoomSection />
       </div>
 
-      {/* Facilities Section */}
+      {/* Facilities Section
       <ParallaxEffect img1={img1}>
+        <FacilitiesSection />
+      </ParallaxEffect> */}
+
+      {/* Facilities Section (Default 100vh) */}
+      <ParallaxEffect img1={img1} height="h-[70vh]">
         <FacilitiesSection />
       </ParallaxEffect>
 
@@ -254,12 +259,16 @@ export function Home() {
         </div>
       </div>
 
-      {/* Dining */}
+      {/* Dining
       <div className="mb-4">
-      <ParallaxEffect img1={img1}>
+        <ParallaxEffect img1={img1}>
+          <Dining img1={img2} />
+        </ParallaxEffect>
+      </div> */}
+      {/* Dining Section (Smaller Height - 60vh) */}
+      <ParallaxEffect img1={img1} height="md:h-[70vh]">
         <Dining img1={img2} />
       </ParallaxEffect>
-      </div>
 
       {/* Rooms Gallery */}
       {/* <div className="p-6 md:p-12">
@@ -318,18 +327,22 @@ export function Home() {
       </div> */}
 
       <div>
-        <RoomGallery img1={img1} img2={img2}/>
+        <RoomGallery img1={img1} img2={img2} />
       </div>
-      
 
-      {/* Testimonials */}
+
+      {/* Testimonials
       <div className="overflow-x-hidden">
         <ParallaxEffect img1={img1}>
           <div>
             <Testimonial />
           </div>
         </ParallaxEffect>
-      </div>
+      </div> */}
+      {/* Testimonials Section (Even Smaller - 50vh) */}
+      <ParallaxEffect img1={img2} height="h-[60vh]">
+        <Testimonial />
+      </ParallaxEffect>
     </div>
   );
 }
