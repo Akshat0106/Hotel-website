@@ -1,7 +1,7 @@
 import img2 from "../assets/img-2.jpg"; 
 export function OtherFacilities(){
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-center gap-12">
+    <div className="max-w-7xl mx-auto px-12 py-12 flex flex-col md:flex-row items-center justify-center gap-12 mt-20">
       
       <div className="md:w-1/2 text-center md:text-left">
         <h2 className="text-4xl font-bold mb-4">Other Facilities</h2>

@@ -57,17 +57,19 @@ function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full h-20 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}
+      className={`fixed top-0 left-0 w-full h-20 z-[100] transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}
     >
       <div className='container max-w-7xl mx-auto flex justify-between items-center p-4'>
         <h1 className='text-2xl font-bold text-black'>Logo</h1>
         
+        <div>
         <a
           href='https://github.com/Akshat0106/Hotel-website'
           className='px-4 py-2 bg-black text-white rounded-md hover:opacity-80 transition hidden md:inline-block'
         >
           Github-Link
         </a>
+        </div>
 
         {/* Mobile Menu Icon */}
         <button

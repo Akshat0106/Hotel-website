@@ -69,22 +69,22 @@
 
 
 import { useState } from "react";
-import dp1 from "../../assets/dp-1.jpg";
-import dp2 from "../../assets/dp-2.jpg";
+// import dp1 from "../../assets/dp-1.jpg";
+// import dp2 from "../../assets/dp-2.jpg";
 
 export function Testimonial() {
   const Testimonial_data = [
     {
-      img: dp1,
+      // img: dp1,
       context_text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       name: "John Doe",
       designation: "Advocate",
     },
     {
-      img: dp2,
+      // img: dp2,
       context_text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       name: "Jane Doe",
       designation: "Advocate",
     },
@@ -102,15 +102,15 @@ export function Testimonial() {
 
   return (
     <div>
-      <section className="flex h-auto w-full p-6 md:p-8 justify-center items-center bg-white">
+      <section className="flex h-56 w-screen lg:w-full p-6 md:p-8 justify-center items-center bg-gray-800">
         <div className="max-w-2xl w-full">
           {Testimonial_data.map(
             (item, index) =>
               index === current && (
                 <div key={index}>
                   {/* Testimonial Text */}
-                  <div className="pb-6 md:pb-10 text-center md:text-left">
-                    <h2 className="text-lg md:text-2xl lg:text-3xl font-bold">
+                  <div className="pb-6 md:pb-10 text-start md:text-left">
+                    <h2 className="text-sm md:text-2xl lg:text-3xl font-bold">
                       {item.context_text}
                     </h2>
                   </div>
@@ -119,11 +119,11 @@ export function Testimonial() {
                   <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6">
                     {/* Image & User Info */}
                     <div className="flex flex-col md:flex-row gap-4 items-center">
-                      <img
+                      {/* <img
                         src={item.img}
                         className="h-28 w-28 md:h-40 md:w-40 rounded-full"
                         alt="User"
-                      />
+                      /> */}
                       <div className="text-center md:text-left font-medium">
                         <h6 className="text-xl">{item.name}</h6>
                         <span className="text-gray-600">{item.designation}</span>

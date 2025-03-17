@@ -4,7 +4,7 @@ export function Gallery(){
   
     // Sample image URLs - replace with your actual hotel room images
     const roomImages = [
-      "/api/placeholder/600/400", 
+      "", 
       "/api/placeholder/600/400", 
       "/api/placeholder/600/400",
       "/api/placeholder/600/400",

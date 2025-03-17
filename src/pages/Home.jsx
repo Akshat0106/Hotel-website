@@ -203,21 +203,27 @@ import { ParallaxEffect } from "../components/homePageComponents/ParallaxEffect"
 import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSection";
 import { Dining } from "../components/homePageComponents/Dining";
 import { Testimonial } from "../components/homePageComponents/Testimonial";
-import { Navigate } from "react-router";
+import { RoomGallery } from "../components/homePageComponents/RoomGallery";
+
+// import { Navigate } from "react-router";
 
 export function Home() {
   return (
     <div>
       {/* Hero Section */}
       <HeroSection />
+
+
       {/* Rooms Section */}
-      <div className="bg-gray-200 pt-2">
+      <div className="bg-gray-200 pt-2 w-full overflow-x-hidden">
         <RoomSection />
       </div>
+
       {/* Facilities Section */}
       <ParallaxEffect img1={img1}>
         <FacilitiesSection />
       </ParallaxEffect>
+
       {/* About Us Section */}
       <div className="bg-gray-200 py-12 px-6 md:px-20 lg:px-56">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -249,9 +255,11 @@ export function Home() {
       </div>
 
       {/* Dining */}
+      <div className="mb-4">
       <ParallaxEffect img1={img1}>
         <Dining img1={img2} />
       </ParallaxEffect>
+      </div>
 
       {/* Rooms Gallery */}
       {/* <div className="p-6 md:p-12">
@@ -274,7 +282,7 @@ export function Home() {
           </a>
         </div>
       </div> */}
-      <div className="p-6 md:p-12">
+      {/* <div className="p-6 md:p-12">
         <div className="text-3xl md:text-4xl font-bold text-center border-b-4 border-black pb-4">
           Rooms Gallery
         </div>
@@ -290,7 +298,7 @@ export function Home() {
                 alt="Room"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              {/* Hover overlay effect */}
+              Hover overlay effect
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <span className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a href="">View Details</a>
@@ -307,12 +315,17 @@ export function Home() {
             View More
           </a>
         </div>
+      </div> */}
+
+      <div>
+        <RoomGallery img1={img1} img2={img2}/>
       </div>
+      
 
       {/* Testimonials */}
-      <div>
+      <div className="overflow-x-hidden">
         <ParallaxEffect img1={img1}>
-          <div className="p-52">
+          <div>
             <Testimonial />
           </div>
         </ParallaxEffect>
