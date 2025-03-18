@@ -195,14 +195,127 @@
 //     </div>
 //   );
 // }
+{/* Rooms Grid
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {filteredRooms.map((room) => (
+    <div key={room.id} className="bg-white shadow-lg rounded-lg p-4">
+      <img
+        src={room.src}
+        alt={room.name}
+        className="w-full h-64 rounded-lg object-cover"
+      />
+      <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+      <p className="text-gray-600">Rs.{room.price}</p>
+      <p className="text-gray-500">Air conditioned rooms (GST extra)</p>
+      <button className="bg-black text-white px-4 py-2 mt-4 rounded" onClick={handleClick}>
+        View Details
+      </button>
+    </div>
+  ))}
+</div> */}
+{/* Rooms Grid Container */}
+{/* <div className="flex justify-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+    {filteredRooms.map((room) => (
+      <div key={room.id} className="bg-white shadow-lg rounded-lg p-4">
+        <img
+          src={room.src}
+          alt={room.name}
+          className="w-full h-64 rounded-lg object-cover"
+        />
+        <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+        <p className="text-gray-600">Rs.{room.price}</p>
+        <p className="text-gray-500">
+          Air conditioned rooms (GST extra)
+        </p>
+        <button
+          className="bg-black text-white px-4 py-2 mt-4 rounded"
+          onClick={handleClick}
+        >
+          View Details
+        </button>
+      </div>
+    ))}
+  </div>
+</div> */}
+{/* Rooms Grid Container */}
+{/* <div className="flex justify-center">
+  <div
+    className={`grid gap-8 justify-center ${
+      filteredRooms.length === 1
+        ? "grid-cols-1"
+        : "grid-cols-1 md:grid-cols-2"
+    }`}
+  >
+    {filteredRooms.map((room) => (
+      <div
+        key={room.id}
+        className="bg-white shadow-lg rounded-lg p-4 max-w-lg"
+      >
+        <img
+          src={room.src}
+          alt={room.name}
+          className="w-full h-64 rounded-lg object-cover"
+        />
+        <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+        <p className="text-gray-600">Rs.{room.price}</p>
+        <p className="text-gray-500">
+          Air conditioned rooms (GST extra)
+        </p>
+        <button
+          className="bg-black text-white px-4 py-2 mt-4 rounded"
+          onClick={handleClick}
+        >
+          View Details
+        </button>
+      </div>
+    ))}
+  </div>
+</div> */}
+{/* Rooms Grid Container */}
+{/* <div className="flex justify-center">
+  <div
+    className={`gap-8 ${
+      filteredRooms.length === 1
+        ? "flex flex-col items-center" // Flex layout for a single item
+        : "grid grid-cols-1 md:grid-cols-2 justify-items-center" // Grid layout for multiple items
+    }`}
+  >
+    {filteredRooms.map((room) => (
+      <div
+        key={room.id}
+        className="bg-white shadow-lg rounded-lg p-4 max-w-lg mx-auto"
+      >
+        <img
+          src={room.src}
+          alt={room.name}
+          className="w-full h-64 rounded-lg object-cover"
+        />
+        <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+        <p className="text-gray-600">Rs.{room.price}</p>
+        <p className="text-gray-500">
+          Air conditioned rooms (GST extra)
+        </p>
+        <button
+          className="bg-black text-white px-4 py-2 mt-4 rounded"
+          onClick={handleClick}
+        >
+          View Details
+        </button>
+      </div>
+    ))}
+  </div>
+</div> */}
+{/* Rooms Grid Container */}
 
 // import img2 from "../assets/img-2.jpg";
 // import img1 from "../assets/img-1.jpg";
+
+
 import img2 from "../../assets/img-2.jpg";
 import img1 from "../../assets/img-1.jpg";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 const roomsData = [
   {
@@ -235,9 +348,12 @@ const roomsData = [
   },
 ];
 export function RoomSection() {
-  // const navigate=useNavigate()
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  const handleClick = () => {
+    navigate("/rooms");
+  };
   // Filter rooms based on selected category
   const filteredRooms =
     selectedCategory === "All"
@@ -257,7 +373,7 @@ export function RoomSection() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full border bg-black  text-white hover:border-4 hover:border-white ${
+                  className={`px-6 py-2 cursor-pointer rounded-full border bg-black  text-white hover:border-4 hover:border-white ${
                     selectedCategory === category
                       ? "bg-gold text-white"
                       : "border-gray-400"
@@ -270,23 +386,38 @@ export function RoomSection() {
           </div>
         </div>
 
-        {/* Rooms Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredRooms.map((room) => (
-            <div key={room.id} className="bg-white shadow-lg rounded-lg p-4">
-              <img
-                src={room.src}
-                alt={room.name}
-                className="w-full h-64 rounded-lg object-cover"
-              />
-              <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
-              <p className="text-gray-600">Rs.{room.price}</p>
-              <p className="text-gray-500">Air conditioned rooms (GST extra)</p>
-              <button className="bg-black text-white px-4 py-2 mt-4 rounded">
-                View Details
-              </button>
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <div
+            className={`gap-8 ${
+              filteredRooms.length === 1
+                ? "flex flex-col items-center" // Single card centered
+                : "grid grid-cols-1 md:grid-cols-2 justify-items-center" // Multiple cards
+            }`}
+          >
+            {filteredRooms.map((room) => (
+              <div
+                key={room.id}
+                className="bg-white shadow-lg rounded-lg p-4 w-[400px] h-[500px] mx-auto"
+              >
+                <img
+                  src={room.src}
+                  alt={room.name}
+                  className="w-[400px] h-[250px] rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+                <p className="text-gray-600">Rs.{room.price}</p>
+                <p className="text-gray-500">
+                  Air conditioned rooms (GST extra)
+                </p>
+                <button
+                  className="bg-black text-white px-4 py-2 mt-4 rounded cursor-pointer"
+                  onClick={handleClick}
+                >
+                  View Details
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

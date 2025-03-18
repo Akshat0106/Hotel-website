@@ -204,10 +204,16 @@ import { FacilitiesSection } from "../components/homePageComponents/FacilitiesSe
 import { Dining } from "../components/homePageComponents/Dining";
 import { Testimonial } from "../components/homePageComponents/Testimonial";
 import { RoomGallery } from "../components/homePageComponents/RoomGallery";
+import { useNavigate } from "react-router-dom";
 
 // import { Navigate } from "react-router";
 
 export function Home() {
+  const navigateAbout=useNavigate()
+
+  const handleAboutClick=()=>{
+    navigateAbout('/aboutus')
+  }
   return (
     <div>
       {/* Hero Section */}
@@ -244,6 +250,7 @@ export function Home() {
               <a
                 href="#"
                 className="inline-block px-6 py-3 text-lg font-semibold bg-black text-white rounded-lg hover:opacity-80 transition"
+                onClick={handleAboutClick}
               >
                 View More
               </a>
