@@ -201,6 +201,8 @@
 import img2 from "../../assets/img-2.jpg";
 import img1 from "../../assets/img-1.jpg";
 import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+
 
 const roomsData = [
   {
@@ -233,6 +235,7 @@ const roomsData = [
   },
 ];
 export function RoomSection() {
+  // const navigate=useNavigate()
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Filter rooms based on selected category

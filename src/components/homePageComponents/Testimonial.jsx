@@ -107,7 +107,7 @@ export function Testimonial() {
       <div className="text-center text-xl text-white">★★★★★</div>
       </div>
 
-      <section className="flex h-56 w-screen lg:w-full p-6 md:p-8 justify-center items-center bg-gray-300">
+      <section className="flex h-56 w-screen lg:w-full p-6 md:p-8 justify-center items-center bg-white">
         <div className="max-w-2xl w-full">
           {Testimonial_data.map(
             (item, index) =>
