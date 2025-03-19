@@ -375,7 +375,7 @@ export function RoomSection() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-2 cursor-pointer rounded-full border bg-black  text-white hover:border-4 hover:border-white ${
                     selectedCategory === category
-                      ? "bg-gold text-white"
+                      ? "bg-gray-500 text-white"
                       : "border-gray-400"
                   }`}
                 >
@@ -386,7 +386,7 @@ export function RoomSection() {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div
             className={`gap-8 ${
               filteredRooms.length === 1
@@ -408,6 +408,39 @@ export function RoomSection() {
                 <p className="text-gray-600">Rs.{room.price}</p>
                 <p className="text-gray-500">
                   Air conditioned rooms (GST extra)
+                </p>
+                <button
+                  className="bg-black text-white px-4 py-2 mt-4 rounded cursor-pointer"
+                  onClick={handleClick}
+                >
+                  View Details
+                </button>
+              </div>
+            ))}
+          </div>
+        </div> */}
+                <div className="flex justify-center">
+          <div
+            className={`gap-8 ${
+              filteredRooms.length === 1
+                ? "flex flex-col items-center"
+                : "grid grid-cols-1 sm:grid-cols-2 justify-items-center"
+            }`}
+          >
+            {filteredRooms.map((room) => (
+              <div
+                key={room.id}
+                className="bg-white shadow-lg rounded-lg p-4 w-[350px] h-[400px] mx-auto"
+              >
+                <img
+                  src={room.src}
+                  alt={room.name}
+                  className="w-[350px] h-[220px] rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold mt-4">{room.name}</h3>
+                <p className="text-gray-600">Rs. {room.price}</p>
+                <p className="text-gray-500">
+                  Air-conditioned rooms (GST extra)
                 </p>
                 <button
                   className="bg-black text-white px-4 py-2 mt-4 rounded cursor-pointer"

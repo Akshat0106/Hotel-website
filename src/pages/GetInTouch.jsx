@@ -49,9 +49,9 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
 
 export function GetInTouch() {
   return (
-    <div className="w-full flex flex-col items-center mt-20 bg-gray-300">
+    <div className="w-full flex flex-col items-center bg-gray-300">
       {/* Section Title */}
-      <div className="text-4xl font-bold text-center text-gray-800 pb-4">
+      <div className="text-4xl font-bold text-center mt-40 text-gray-800 pb-4">
         Get In Touch
       </div>
       <div className="text-center text-xl mb-6">★★★★★</div>
