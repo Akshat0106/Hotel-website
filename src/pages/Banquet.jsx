@@ -16,7 +16,7 @@ export function Banquet() {
     { src: img2, alt: "Image 3" },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center justify-center gap-12 mt-40">
+    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center justify-center gap-12 mt-60">
       <div>
         <h2 className="text-4xl font-bold text-center">Banquet</h2>
         <div className="text-center text-xl mt-2">★★★★★</div>
