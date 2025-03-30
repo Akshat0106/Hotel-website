@@ -41,7 +41,7 @@ export function Home() {
               A Perfect Place to Remember
             </h1>
             <p className="mt-5 text-gray-700">
-              <b>RATEbot Ai…</b> has been into the hospitality and service
+              <b>Lorem, ipsum.</b> has been into the hospitality and service
               industry for the past 5 years
             </p>
             <div className="mt-6">

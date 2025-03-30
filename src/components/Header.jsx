@@ -29,8 +29,8 @@ function Header() {
           <div className="flex items-center space-x-4 md:space-x-6">
             <FaPhoneAlt className="hidden md:block text-white bg-gray-500 p-2 rounded-full text-3xl" />
             <div className="hidden text-white font-semibold text-sm md:text-base md:flex flex-col md:flex-row md:space-x-2">
-              <span>+91 495 277 4747,</span>
-              <span>+91 6235996607</span>
+              <span>+91 495 277 XXX7,</span>
+              <span>+91 620000000XX</span>
             </div>
             <button className="bg-gray-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">
               Make a Reservation
